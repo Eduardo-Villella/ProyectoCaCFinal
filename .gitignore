@@ -1,0 +1,4 @@
+# Ignorar archivo con variables de entorno
+.env
+# Ignorar la carpeta node_modules
+node_modules/

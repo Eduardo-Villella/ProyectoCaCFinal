@@ -1,0 +1,41 @@
+{
+  "name": "proyectocacfinal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "migrate-create": "node migrate.js create migration",
+    "migrate-create-seed": "node migrate.js create seed",
+    "migrate-up": "node migrate.js up migration",
+    "migrate-down": "node migrate.js down migration",
+    "migrate-reset": "node migrate.js reset migration",
+    "migrate-seed": "node migrate.js up seed",
+    "migrate-undo-seed": "node migrate.js down seed --count 1",
+    
+    "sql-migrate-create": "USE_SQL_FILES=true node migrate.js create migration",
+    "sql-migrate-create-seed": "USE_SQL_FILES=true node migrate.js create seed",
+    "sql-migrate-up": "USE_SQL_FILES=true node migrate.js up migration",
+    "sql-migrate-down": "USE_SQL_FILES=true node migrate.js down migration",
+    "sql-migrate-reset": "USE_SQL_FILES=true node migrate.js reset migration",
+    "sql-migrate-seed": "USE_SQL_FILES=true node migrate.js up seed",
+    "sql-migrate-undo-seed": "USE_SQL_FILES=true node migrate.js down seed --count 1"
+  },
+
+  "keywords": [],
+  "author": "Grupo 2 CEIJ para Codo a Codo 2",
+  "license": "ISC",
+  "description": "Proyecto de venta de libros online",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "db-migrate": "^0.11.14",
+    "db-migrate-mysql": "^2.1.2",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.10.0",
+    "nodemon": "^3.1.3",
+    "sequelize": "^6.37.3"
+  }
+}
