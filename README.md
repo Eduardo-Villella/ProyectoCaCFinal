@@ -16,13 +16,13 @@ ProyectoCacFinal es una aplicación de ventas de libros online accesible desde P
 
 - Crear archivo para las variables de entorno ".env" : en la raiz del proyecto cree un nuevo archivo cuyo nombre solo .env cuyo contenido es:
 
-"# Configuración de la base de datos
-DB_USER=su_usuario      "su_usuario es el nombre que usa para entrar en su base de datos MySql"
-DB_PASSWORD=contraseña  "contraseña es la contraseña que usa en su base de datos MySql"
-DB_NAME=libros_ceij     "libros_ceij es el nombre de la base que usaremos en este proyecto, si usara otra base cambie el nombre"
-DB_HOST=localhost       "localhost es el host para su maquina local donde se aloja la base que creara, si usara otra ponga la dirección del servidor por ejemplo: base@53.226.82.148:3306"
+"# Configuración de la base de datos    
+        DB_USER=su_usuario      "su_usuario es el nombre que usa para entrar en su base de datos MySql"
+        DB_PASSWORD=contraseña  "contraseña es la contraseña que usa en su base de datos MySql"
+        DB_NAME=libros_ceij     "libros_ceij es el nombre de la base que usaremos en este proyecto, si usara otra base cambie el nombre"
+        DB_HOST=localhost       "localhost es el host para su maquina local donde se aloja la base que creara, si usara otra ponga la dirección del servidor por ejemplo: base@53.226.82.148:3306"
 "# Configuración del servidor
-PORT=puerto             "puerto es el número del puerto que usara para conectar con su aplicación backend, ejemplo: 8080 o 5001 o el puerto que tenga libre en su equipo"
+        PORT=puerto             "puerto es el número del puerto que usara para conectar con su aplicación backend, ejemplo: 8080 o 5001 o el puerto que tenga libre en su equipo"
 
 (copie y pegue en su archivo y quite todas las comillas)
 
