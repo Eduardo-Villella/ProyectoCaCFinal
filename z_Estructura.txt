@@ -1,0 +1,70 @@
+ProyectoCacFinal/		◙◙◙ Raiz, nombre del proyecto, carpeta principal a abrir
+│
+├── back/                       ◙◙◙ Backend
+│   ├── controllers/                	# 
+│   ├── dataBase/               	@# Base de Datos
+│   │	├── config/                     # Configuracion de la base de datos
+│   │	│	└── config.js		            @@ LISTO Configuracion para usar variables de entorno en la base de datos
+│   │	├── migrations/             	# Migraciones de la base de datos
+│   │	│	├── ...01-...usuarios	        @@ 20240613010101-create-usuarios-table.js archivo migracion para crear tabla en DB
+│   │	│	├── ...02-...categoria	        @@ 20240613020202-create-categoria-table.js idem
+│   │	│	├── ...03-...libros	            @@ 20240613030303-create-libros-table.js idem
+│   │	│	├── ...04-...carrito	        @@ 20240613040404-create-carrito-table.js idem
+│   │	│	└── ...05-...deta_carr	        @@ 20240613050505-create-detalle-carrito-table.js idem 	
+│   │	├── models/                 	# Modelos (Creacion de tablas de la base de datos)
+│   │	│	├── carrito.js		            @@ LISTO tabla de la base de datos
+│   │   │	├── categoria.js	            @@ LISTO tabla de la base de datos
+│   │   │	├── detalle_carrito.js	        @@ LISTO tabla de la base de datos
+│   │   │	├── index_NoAplica.js           §§ LECTURA - Archivo de centralizacion de modelos y configuracion. SOLO comentario para aprender mas adelante
+│   │   │	├── libros.js		            @@ LISTO tabla de la base de datos
+│   │   │	└── usuarios.js		            @@ LISTO tabla de la base de datos
+│   │   ├── seeders/            	    # Seeders para poblar la base de datos con datos ficticios y de prueba
+│   │	│	└── archivos.js 
+│   │	└── db.js			            @@ LISTO Creacion de la base de datos a traves de inicializacion de Sequelize
+│   ├── middleware/                	# 
+│   ├── routes/                		# 
+│   ├── services/               	# Servicios (logica reutilizable)
+│   │   	   	
+│   └── app.js				        # Archivo de inicio
+│   
+├── front/                      ◙◙◙ Frontend
+│   	├── css/
+│   	│	└── estilos.css		@@ LISTO
+│	├── image/
+│	│	└── muchasImagenes.jpg	@@ LISTO
+│	├── js/
+│	│	├── books_populate.js	@@ LISTO
+│	│	└── script.js		    ¶¶ Vacio futuros usos
+│	├── card.html			    @@ LISTO
+│	├── catalogo.html		    ◘◘ Modificar link
+│	├── contacto.html		    @@ LISTO
+│	├── index.html			    @@ LISTO entrada al proyecto en la pagina html por localhost
+│	├── login.html			    @@ LISTO
+│	├── nosotros.html		    @@ LISTO
+│	├── productos.html		    @@ LISTO
+│	└── registro.html		    @@ LISTO
+│
+├── node_modules/           	@# Modulos de Node.js al cargar exprees (u otra dependencia) con: npm install nombreDelPaquete
+│		└── subcarpetas		    # Subcarpetas con todos los modulos de node.js como express, mysql2, dotenv, etc.
+├── test/             			# Test y check archivos script para pruebas
+│   	├── checkDatabaseConfig.js	▲▼ Archivo que prueba interpolar las variables de entorno en database.json
+│   	├── checkEnv.js			    ▲▼ Archivo que prueba que las variables de entorno esten cargadas
+│   	├── checkRutasYvarEnv.js	▲▼ Archivo que devuelve la ruta y las variables de entorno
+│   	└── test-db-connection.js	▲▼ Archivo creado para probar la conexion con la base de datos antes de crear las tablas
+├── .env				        # Variables de entorno DB=libros_ceij user=ceij password=A1b2C3d4 DB_HOST=35.226.28.148 o localhost PORT= 
+├── .gitignore                  # Agregar archivos o carpetas que no se suben a GitHub por ejemplo .env y/o node_modules (que se recupera con npm install)
+├── database.json			    # Creamos para configurar la comunicacion con db-migrate despues de: npm install db-migrate db-migrate-mysql *y agregamos script en package.json **
+├── migrate.js				    ♥♥ Script necesario para utilizar las variables de entorno con db-migrate
+├── package-lock.json			# Al cargar exprees (u otra dependencia) con: npm install nombreDelPaquete
+├── package.json			    # Al iniciar node -que ya esta instalado pero no inicializado- con: npm init
+├── README.md				    # Datos sobre el proyecto y de interes para desarrollo
+└── z_Estructura.txt            # Este archivo con el diagrama basico decomo empezamos y que se va agregando al proyecto
+ 
+
+
+
+
+
+
+NOTAS y mas comentarios
+*	Si luego de instalar da vulnerabilidades seguir los pasos al final del mensaje de terminal npm audit  y npm audit fix --force
